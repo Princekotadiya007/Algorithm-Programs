@@ -40,8 +40,17 @@ namespace AlgorithmProgram
         {
             //Creating a character array named tempString to perform swapping operation
             char[] tempString = enteredString.ToCharArray();
+            //creating a temporary variable temp for swapping operation
+            //swap logic to swap leftIndex with the rightIndex
+            char temp = tempString[leftIndex];
+            tempString[leftIndex] = tempString[rightIndex];
+            tempString[rightIndex] = temp;
 
-            
+            //Converting tempString array back to string
+            string toReturn = new string(tempString);
+
+            //Finally return the string which we have converted from the array
+            return toReturn;
         }
         public void Driver()
         {
