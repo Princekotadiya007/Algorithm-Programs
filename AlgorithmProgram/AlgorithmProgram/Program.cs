@@ -10,8 +10,31 @@ namespace AlgorithmProgram
     {
         static void Main(string[] args)
         {
-            PermutationsOfString permutations = new PermutationsOfString();
-            permutations.Driver();
+            bool flag = true;
+            while (flag)
+            {
+                Console.WriteLine("Welcome to Algorithm program");
+                Console.WriteLine("\n1.PermutationsOfString,\n2.InsertionSort,\n3.Bubblesort");
+                int option = Convert.ToInt32(Console.ReadLine());
+                switch (option)
+                {
+                    case 1:
+                        PermutationsOfString permutations = new PermutationsOfString();
+                        permutations.Driver();
+                        break;
+                    case 2:
+                        InsertionSort sortsort = new InsertionSort();
+                        sortsort.sorting();
+                        break;
+                    case 3:
+                        BubbleSort bubble = new BubbleSort();
+                        bubble.BubbleSorting();
+                        break;
+                    case 4:
+                        flag = false;
+                        break;
+                }
+            }
         }
     }
 }
