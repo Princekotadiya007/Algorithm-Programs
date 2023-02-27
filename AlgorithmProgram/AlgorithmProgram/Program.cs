@@ -14,7 +14,7 @@ namespace AlgorithmProgram
             while (flag)
             {
                 Console.WriteLine("Welcome to Algorithm program");
-                Console.WriteLine("\n1.PermutationsOfString,\n2.InsertionSort,\n3.Bubblesort");
+                Console.WriteLine("\n1.PermutationsOfString,\n2.InsertionSort,\n3.Bubblesort,\n4.Anagram");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -31,6 +31,10 @@ namespace AlgorithmProgram
                         bubble.BubbleSorting();
                         break;
                     case 4:
+                        Anagram anagram = new Anagram();
+                        anagram.Anagrams("prince","vishal");
+                        break;
+                    case 5:
                         flag = false;
                         break;
                 }
