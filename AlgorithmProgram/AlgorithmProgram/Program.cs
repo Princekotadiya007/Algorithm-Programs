@@ -32,7 +32,7 @@ namespace AlgorithmProgram
                         break;
                     case 4:
                         Anagram anagram = new Anagram();
-                        anagram.Anagrams("prince","vishal");
+                        anagram.Drivers();
                         break;
                     case 5:
                         MergeSort mergeSort = new MergeSort();

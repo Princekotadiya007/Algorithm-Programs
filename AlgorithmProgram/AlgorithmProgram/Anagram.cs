@@ -8,20 +8,40 @@ namespace AlgorithmProgram
 {
     public class Anagram
     {
-        public void Anagrams(string input1, string input2)
+        public bool CheckIfAnagrams(string str1, string str2)
         {
-            char[] char1 = input1.ToLower().ToCharArray();
-            char[] char2 = input2.ToLower().ToCharArray();
+            if (str1.Length != str2.Length)
+            {
+                return false;
+            }
 
-            Array.Sort(char1, char2);
+            // convert strings to character arrays and sort them
+            char[] charArr1 = str1.ToLower().ToCharArray();
+            char[] charArr2 = str2.ToLower().ToCharArray();
+            Array.Sort(charArr1);
+            Array.Sort(charArr2);
 
-            string str1 = char1.ToString();
-            string str2 = char2.ToString();
+            // check if the sorted character arrays are equal
+            return new string(charArr1) == new string(charArr2);
+        }
+        public void Drivers()
+        {
+            Console.Write("Enter first string: ");
+            string str1 = Console.ReadLine();
 
-            if (str1 == str2)
-                Console.WriteLine("The input is Anagram");
+            Console.Write("Enter second string: ");
+            string str2 = Console.ReadLine();
+
+            bool areAnagrams = CheckIfAnagrams(str1, str2);
+
+            if (areAnagrams)
+            {
+                Console.WriteLine("The two strings are anagrams.");
+            }
             else
-                Console.WriteLine("Not a Anagram");
+            {
+                Console.WriteLine("The two strings are not anagrams.");
+            }
         }
     }
 }
