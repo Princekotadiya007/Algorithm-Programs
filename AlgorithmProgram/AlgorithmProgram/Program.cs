@@ -14,7 +14,7 @@ namespace AlgorithmProgram
             while (flag)
             {
                 Console.WriteLine("Welcome to Algorithm program");
-                Console.WriteLine("\n1.PermutationsOfString,\n2.InsertionSort,\n3.Bubblesort,\n4.Anagram, \n5.MergeSort,\n6.PrimeNumber");
+                Console.WriteLine("\n1.PermutationsOfString,\n2.InsertionSort,\n3.Bubblesort,\n4.Anagram, \n5.MergeSort,\n6.PrimeNumber,\n7.BinarySearch");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -43,6 +43,10 @@ namespace AlgorithmProgram
                         prime.Primes();
                         break;
                     case 7:
+                        BinarySearchs binary = new BinarySearchs();
+                        binary.DriverMethod();
+                        break;
+                    case 8:
                         flag = false;
                         break;
                 }
