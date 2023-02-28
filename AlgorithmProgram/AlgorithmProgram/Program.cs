@@ -14,7 +14,7 @@ namespace AlgorithmProgram
             while (flag)
             {
                 Console.WriteLine("Welcome to Algorithm program");
-                Console.WriteLine("\n1.PermutationsOfString,\n2.InsertionSort,\n3.Bubblesort,\n4.Anagram, \n5.MergeSort");
+                Console.WriteLine("\n1.PermutationsOfString,\n2.InsertionSort,\n3.Bubblesort,\n4.Anagram, \n5.MergeSort,\n6.PrimeNumber");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -39,6 +39,10 @@ namespace AlgorithmProgram
                         mergeSort.DriverControl();
                         break;
                     case 6:
+                        PrimeNumber prime = new PrimeNumber();
+                        prime.Primes();
+                        break;
+                    case 7:
                         flag = false;
                         break;
                 }
