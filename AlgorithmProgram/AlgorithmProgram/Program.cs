@@ -14,7 +14,7 @@ namespace AlgorithmProgram
             while (flag)
             {
                 Console.WriteLine("Welcome to Algorithm program");
-                Console.WriteLine("\n1.PermutationsOfString,\n2.InsertionSort,\n3.Bubblesort,\n4.Anagram");
+                Console.WriteLine("\n1.PermutationsOfString,\n2.InsertionSort,\n3.Bubblesort,\n4.Anagram, \n5.MergeSort");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -35,6 +35,10 @@ namespace AlgorithmProgram
                         anagram.Anagrams("prince","vishal");
                         break;
                     case 5:
+                        MergeSort mergeSort = new MergeSort();
+                        mergeSort.DriverControl();
+                        break;
+                    case 6:
                         flag = false;
                         break;
                 }
